@@ -1,7 +1,11 @@
-alert("NEW SCRIPT LOADED");
 console.log("API version script loaded");
 
-window.analyzeInput = async function () {
+document.addEventListener("DOMContentLoaded", function () {
+  const analyzeBtn = document.getElementById("analyzeBtn");
+  analyzeBtn.addEventListener("click", analyzeInput);
+});
+
+async function analyzeInput() {
   const input = document.getElementById("userInput").value;
   const resultBox = document.getElementById("result");
 
@@ -32,11 +36,7 @@ window.analyzeInput = async function () {
       <p><strong>Pattern Score:</strong> ${data.pattern_score}</p>
       <p><strong>Intent Score:</strong> ${data.intent_score}</p>
       <p><strong>Final Risk:</strong> ${data.final_risk}</p>
-      <p><strong>Detected Patterns:</strong> ${
-        data.detected_patterns && data.detected_patterns.length
-          ? data.detected_patterns.join(", ")
-          : "None"
-      }</p>
+      <p><strong>Detected Patterns:</strong> ${data.detected_patterns.length ? data.detected_patterns.join(", ") : "None"}</p>
       <p><strong>Decision:</strong> ${data.decision}</p>
       <p><strong>Reason:</strong> ${data.reason}</p>
     `;
@@ -44,6 +44,6 @@ window.analyzeInput = async function () {
   } catch (error) {
     resultBox.className = "result-box danger";
     resultBox.innerHTML = "❌ Error connecting to backend API.";
-    console.error("API ERROR:", error);
+    console.error(error);
   }
-};
+}
