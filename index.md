@@ -304,24 +304,26 @@ a {
 <!-- 📊 DASHBOARD -->
 
 <div class="section">
-  <h2>📊 AI Security Dashboard</h2>
+  <h2>🛡️ AI Security Operations Center</h2>
 
-  <div class="card">
-    <h3>Red Team Evaluation Dashboard</h3>
+<p>
+Real-time AI threat analytics,
+attack intelligence,
+adaptive learning,
+and security monitoring for LLM applications.
+</p>
 
-    <p>
-      Visual tracking of attacks, blocks, leakage attempts, and defense performance.
-    </p>
+<p>
+Visualizes prompt injection attacks,
+risk escalation,
+blocked requests,
+threat trends,
+and defense effectiveness.
+</p>
 
-    <p style="color:#94a3b8;">
-      Measures how well layered AI defenses withstand adversarial prompts.
-    </p>
-
-    <a class="button" href="https://github.com/mohanakannan92/ai-security-lab">
-      View Dashboard Code
-    </a>
-  </div>
-</div>
+<a href="#">
+View Operations Center
+</a>
 
 <!-- 🧪 TOOLS -->
 
