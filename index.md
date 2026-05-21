@@ -304,13 +304,15 @@ a {
 <!-- 📊 DASHBOARD -->
 
 <div class="section">
-  <h2>🛡️ AI Security Operations Center</h2>
+  <h2>👑🛡️ AI Security Operations Center</h2>
 
 <p>
-Real-time AI threat analytics,
-attack intelligence,
+Offensive + Defensive AI Security Intelligence
+
+Real-time threat analytics,
 adaptive learning,
-and security monitoring for LLM applications.
+prompt injection detection,
+and security monitoring.
 </p>
 
 <p>
@@ -322,6 +324,7 @@ and defense effectiveness.
 </p>
 
 <a href="#">
+<a href="http://127.0.0.1:8000/dashboard-ui">
 View Operations Center
 </a>
 
