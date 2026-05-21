@@ -323,7 +323,7 @@ threat trends,
 and defense effectiveness.
 </p>
 
-<a href="http://127.0.0.1:8000/dashboard-ui">
+<a href="http://127.0.0.1:8000/dashboard-ui" class="btn">
 View Operations Center
 </a>
 
