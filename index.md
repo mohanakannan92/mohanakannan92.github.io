@@ -301,9 +301,10 @@ a {
   </div>
 </div>
 
-<!-- 📊 DASHBOARD -->
+<!-- 🛡️ AI SECURITY OPERATIONS CENTER -->
 
 <div class="section">
+<<<<<<< HEAD
   <h2>👑🛡️ AI Security Operations Center</h2>
 
 <p>
@@ -326,6 +327,50 @@ and defense effectiveness.
 <a href="http://127.0.0.1:8000/dashboard-ui" class="btn">
 View Operations Center
 </a>
+=======
+  <h2>👑 🛡️ AI Security Operations Center</h2>
+
+  <div class="card">
+
+    <h3>Offensive + Defensive AI Security Intelligence</h3>
+
+    <p>
+      Real-time visibility into AI attacks, prompt injection attempts,
+      trust scoring, RAG security telemetry, adaptive learning,
+      and defense effectiveness.
+    </p>
+
+    <div class="grid">
+
+      <div>
+        <h4>Threat Monitoring</h4>
+        <ul>
+          <li>Prompt Injection Detection</li>
+          <li>Role Override Tracking</li>
+          <li>System Prompt Extraction Attempts</li>
+          <li>Attack Trend Analysis</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Security Intelligence</h4>
+        <ul>
+          <li>Trust Scoring Engine</li>
+          <li>RAG Security Monitoring</li>
+          <li>Context Poisoning Detection</li>
+          <li>Adaptive Learning Metrics</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <a class="button" href="/ai-security-dashboard/">
+      Open Operations Center
+    </a>
+
+  </div>
+</div>
+>>>>>>> af31da0 (Add AI Security Dashboard + index.md)
 
 <!-- 🧪 TOOLS -->
 
