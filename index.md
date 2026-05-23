@@ -301,33 +301,7 @@ a {
   </div>
 </div>
 
-<!-- 🛡️ AI SECURITY OPERATIONS CENTER -->
-
 <div class="section">
-<<<<<<< HEAD
-  <h2>👑🛡️ AI Security Operations Center</h2>
-
-<p>
-Offensive + Defensive AI Security Intelligence
-
-Real-time threat analytics,
-adaptive learning,
-prompt injection detection,
-and security monitoring.
-</p>
-
-<p>
-Visualizes prompt injection attacks,
-risk escalation,
-blocked requests,
-threat trends,
-and defense effectiveness.
-</p>
-
-<a href="http://127.0.0.1:8000/dashboard-ui" class="btn">
-View Operations Center
-</a>
-=======
   <h2>👑 🛡️ AI Security Operations Center</h2>
 
   <div class="card">
@@ -370,7 +344,7 @@ View Operations Center
 
   </div>
 </div>
->>>>>>> af31da0 (Add AI Security Dashboard + index.md)
+
 
 <!-- 🧪 TOOLS -->
 
