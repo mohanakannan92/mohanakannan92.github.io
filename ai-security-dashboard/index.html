@@ -8,139 +8,77 @@
 </head>
 <body>
   <main class="dashboard">
+  <h1>🛡️ AI Security Operations Dashboard</h1>
 
-    <header class="hero">
-      <h1>👑 🛡️ AI Security Operations Center</h1>
-      <p>
-        Unified dashboard for Prompt Security, RAG Security, Trust Scoring,
-        Context Poisoning Detection, and AI Defense Telemetry.
-      </p>
-    </header>
-
-    <section class="cards">
-      <div class="card metric">
-        <p>Threat Level</p>
-        <h2>MEDIUM</h2>
-      </div>
-
-      <div class="card metric">
-        <p>Threat Score</p>
-        <h2>20</h2>
-      </div>
-
-      <div class="card metric">
-        <p>Total Requests</p>
-        <h2>1</h2>
-      </div>
-
-      <div class="card metric">
-        <p>Blocked Requests</p>
-        <h2>1</h2>
-      </div>
-    </section>
-
-    <section class="card wide">
-
-  <h2>Operations Center Overview</h2>
-
-  <p>
-    Unified monitoring platform for AI Security Lab.
-  </p>
-
-  <div class="summary-grid">
-
-    <div>
-      <strong>Prompt Security</strong>
-      <span>ACTIVE</span>
+  <section class="metrics-grid">
+    <div class="metric-card">
+      <span>Threat Level</span>
+      <strong class="medium">MEDIUM</strong>
     </div>
 
-    <div>
-      <strong>RAG Security</strong>
-      <span>ACTIVE</span>
+    <div class="metric-card">
+      <span>Threat Score</span>
+      <strong>20</strong>
     </div>
 
-    <div>
-      <strong>Trust Scoring</strong>
-      <span>ACTIVE</span>
+    <div class="metric-card">
+      <span>Total Requests</span>
+      <strong>1</strong>
     </div>
 
-    <div>
-      <strong>Adaptive Learning</strong>
-      <span>ACTIVE</span>
+    <div class="metric-card">
+      <span>Blocked Requests</span>
+      <strong class="danger">1</strong>
     </div>
 
-  </div>
+    <div class="metric-card">
+      <span>Review Requests</span>
+      <strong class="warning">0</strong>
+    </div>
+  </section>
 
-</section>
+  <section class="charts-grid">
+    <div class="chart-card">
+      <h2>Top Attack Keywords</h2>
+      <canvas id="keywordsChart"></canvas>
+    </div>
 
-    <section class="grid-two">
+    <div class="chart-card">
+      <h2>Threat Level</h2>
+      <div class="status-pill medium-bg">MEDIUM</div>
+    </div>
 
-      <div class="card">
-        <h2>Decision Distribution</h2>
-        <div class="bar-row">
-          <span>Allowed</span>
-          <div class="bar"><div class="fill allowed"></div></div>
-          <strong>2</strong>
-        </div>
+    <div class="chart-card">
+      <h2>Decision Distribution</h2>
+      <canvas id="decisionChart"></canvas>
+    </div>
 
-        <div class="bar-row">
-          <span>Suspicious</span>
-          <div class="bar"><div class="fill suspicious"></div></div>
-          <strong>1</strong>
-        </div>
+    <div class="chart-card">
+      <h2>Daily Attack Trend</h2>
+      <canvas id="trendChart"></canvas>
+    </div>
+  </section>
 
-        <div class="bar-row">
-          <span>Blocked</span>
-          <div class="bar"><div class="fill blocked"></div></div>
-          <strong>1</strong>
-        </div>
-      </div>
+  <section class="charts-grid">
+    <div class="chart-card">
+      <h2>RAG Security</h2>
+      <p>Trust scoring, context poisoning detection, and secure prompt generation are active.</p>
+      <div class="status-pill safe-bg">ACTIVE</div>
+    </div>
 
-      <div class="card">
-        <h2>Top Attack Signals</h2>
-        <div class="tag-list">
-          <span>ignore instructions</span>
-          <span>reveal system prompt</span>
-          <span>override guidance</span>
-          <span>internal guidance</span>
-          <span>context poisoning</span>
-        </div>
-      </div>
+    <div class="chart-card">
+      <h2>Trust-Aware Gateway</h2>
+      <p>Suspicious and malicious documents are filtered before RAG prompt construction.</p>
+      <div class="status-pill safe-bg">ENFORCING</div>
+    </div>
 
-    </section>
-
-    <section class="card wide">
-      <h2>Gateway Summary</h2>
-      <p>
-        The Trust-Aware RAG Gateway filters suspicious and malicious documents
-        before they enter the RAG pipeline. Only trusted context is used for
-        secure prompt generation.
-      </p>
-
-      <div class="summary-grid">
-        <div>
-          <strong>Gateway Decision</strong>
-          <span>ALLOW_WITH_BLOCKED_CONTEXT</span>
-        </div>
-        <div>
-          <strong>Validation</strong>
-          <span>PASS</span>
-        </div>
-        <div>
-          <strong>Trusted Docs</strong>
-          <span>2</span>
-        </div>
-        <div>
-          <strong>Blocked Docs</strong>
-          <span>1</span>
-        </div>
-      </div>
-    </section>
-
-    <a class="button secondary" href="/">Back to Home</a>
-
-  </main>
-
-  <script src="./script.js"></script>
+    <div class="chart-card">
+      <h2>Context Poisoning</h2>
+      <p>Poisoned context is detected, removed, and validated before prompt generation.</p>
+      <div class="status-pill medium-bg">MONITORING</div>
+    </div>
+  </section>
+</main>
+<script src="./script.js"></script>
 </body>
 </html>
