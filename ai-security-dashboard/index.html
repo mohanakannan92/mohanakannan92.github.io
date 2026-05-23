@@ -6,79 +6,82 @@
   <title>AI Security Operations Center</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
   <main class="dashboard">
-  <h1>🛡️ AI Security Operations Dashboard</h1>
+    <h1>🛡️ AI Security Operations Dashboard</h1>
 
-  <section class="metrics-grid">
-    <div class="metric-card">
-      <span>Threat Level</span>
-      <strong class="medium">MEDIUM</strong>
-    </div>
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <span>Threat Level</span>
+        <strong id="threatLevel" class="medium">MEDIUM</strong>
+      </div>
 
-    <div class="metric-card">
-      <span>Threat Score</span>
-      <strong>20</strong>
-    </div>
+      <div class="metric-card">
+        <span>Threat Score</span>
+        <strong id="threatScore">20</strong>
+      </div>
 
-    <div class="metric-card">
-      <span>Total Requests</span>
-      <strong>1</strong>
-    </div>
+      <div class="metric-card">
+        <span>Total Requests</span>
+        <strong id="totalRequests">0</strong>
+      </div>
 
-    <div class="metric-card">
-      <span>Blocked Requests</span>
-      <strong class="danger">1</strong>
-    </div>
+      <div class="metric-card">
+        <span>Blocked Requests</span>
+        <strong id="blockedRequests" class="danger">0</strong>
+      </div>
 
-    <div class="metric-card">
-      <span>Review Requests</span>
-      <strong class="warning">0</strong>
-    </div>
-  </section>
+      <div class="metric-card">
+        <span>Review Requests</span>
+        <strong id="reviewRequests" class="warning">0</strong>
+      </div>
+    </section>
 
-  <section class="charts-grid">
-    <div class="chart-card">
-      <h2>Top Attack Keywords</h2>
-      <canvas id="keywordsChart"></canvas>
-    </div>
+    <section class="charts-grid">
+      <div class="chart-card">
+        <h2>Top Attack Keywords</h2>
+        <canvas id="keywordsChart"></canvas>
+      </div>
 
-    <div class="chart-card">
-      <h2>Threat Level</h2>
-      <div class="status-pill medium-bg">MEDIUM</div>
-    </div>
+      <div class="chart-card">
+        <h2>Threat Level</h2>
+        <div id="threatLevelPill" class="status-pill medium-bg">MEDIUM</div>
+      </div>
 
-    <div class="chart-card">
-      <h2>Decision Distribution</h2>
-      <canvas id="decisionChart"></canvas>
-    </div>
+      <div class="chart-card">
+        <h2>Decision Distribution</h2>
+        <canvas id="decisionChart"></canvas>
+      </div>
 
-    <div class="chart-card">
-      <h2>Daily Attack Trend</h2>
-      <canvas id="trendChart"></canvas>
-    </div>
-  </section>
+      <div class="chart-card">
+        <h2>Daily Attack Trend</h2>
+        <canvas id="trendChart"></canvas>
+      </div>
+    </section>
 
-  <section class="charts-grid">
-    <div class="chart-card">
-      <h2>RAG Security</h2>
-      <p>Trust scoring, context poisoning detection, and secure prompt generation are active.</p>
-      <div class="status-pill safe-bg">ACTIVE</div>
-    </div>
+    <section class="charts-grid">
+      <div class="chart-card">
+        <h2>RAG Security</h2>
+        <p>Trust scoring, context poisoning detection, and secure prompt generation are active.</p>
+        <div class="status-pill safe-bg">ACTIVE</div>
+      </div>
 
-    <div class="chart-card">
-      <h2>Trust-Aware Gateway</h2>
-      <p>Suspicious and malicious documents are filtered before RAG prompt construction.</p>
-      <div class="status-pill safe-bg">ENFORCING</div>
-    </div>
+      <div class="chart-card">
+        <h2>Trust-Aware Gateway</h2>
+        <p>Suspicious and malicious documents are filtered before RAG prompt construction.</p>
+        <div class="status-pill safe-bg">ENFORCING</div>
+      </div>
 
-    <div class="chart-card">
-      <h2>Context Poisoning</h2>
-      <p>Poisoned context is detected, removed, and validated before prompt generation.</p>
-      <div class="status-pill medium-bg">MONITORING</div>
-    </div>
-  </section>
-</main>
-<script src="./script.js"></script>
+      <div class="chart-card">
+        <h2>Context Poisoning</h2>
+        <p>Poisoned context is detected, removed, and validated before prompt generation.</p>
+        <div class="status-pill medium-bg">MONITORING</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

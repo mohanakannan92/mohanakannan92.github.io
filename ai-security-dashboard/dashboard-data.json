@@ -1,0 +1,14 @@
+{
+  "total_requests": 3,
+  "total_documents": 10,
+  "trusted_documents": 4,
+  "suspicious_documents": 10,
+  "malicious_documents": 1,
+  "blocked_documents": 1,
+  "allowed_documents": 4,
+  "validation_pass": 3,
+  "validation_fail": 0,
+  "gateway_allow": 1,
+  "gateway_allow_with_blocked_context": 1,
+  "gateway_block": 0
+}
