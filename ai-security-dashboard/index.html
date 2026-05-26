@@ -9,75 +9,173 @@
 
 <body>
   <main class="dashboard">
-    <h1>🛡️ AI Security Operations Dashboard</h1>
+    <h1>🛡️ AI Security Operations Center</h1>
 
-    <section class="metrics-grid">
-      <div class="metric-card">
-        <span>Threat Level</span>
-        <strong id="threatLevel" class="medium">MEDIUM</strong>
-      </div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('ai-soc', this)">AI SOC Dashboard</button>
+      <button class="tab-btn" onclick="showTab('rag-soc', this)">RAG SOC Dashboard</button>
+      <button class="tab-btn" onclick="showTab('agent-soc', this)">Agent SOC Dashboard</button>
+      <button class="tab-btn" onclick="showTab('redteam', this)">Red Team Dashboard</button>
+    </div>
 
-      <div class="metric-card">
-        <span>Threat Score</span>
-        <strong id="threatScore">20</strong>
-      </div>
+    <section id="ai-soc" class="tab-content active">
+      <h2>🛡️ AI Security SOC Dashboard</h2>
 
-      <div class="metric-card">
-        <span>Total Requests</span>
-        <strong id="totalRequests">0</strong>
-      </div>
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <span>Threat Level</span>
+          <strong id="threatLevel" class="medium">MEDIUM</strong>
+        </div>
 
-      <div class="metric-card">
-        <span>Blocked Requests</span>
-        <strong id="blockedRequests" class="danger">0</strong>
-      </div>
+        <div class="metric-card">
+          <span>Threat Score</span>
+          <strong id="threatScore">20</strong>
+        </div>
 
-      <div class="metric-card">
-        <span>Review Requests</span>
-        <strong id="reviewRequests" class="warning">0</strong>
-      </div>
+        <div class="metric-card">
+          <span>Total Requests</span>
+          <strong id="totalRequests">0</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Blocked Requests</span>
+          <strong id="blockedRequests" class="danger">0</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Review Requests</span>
+          <strong id="reviewRequests" class="warning">0</strong>
+        </div>
+      </section>
+
+      <section class="charts-grid">
+        <div class="chart-card">
+          <h2>Top Attack Keywords</h2>
+          <canvas id="keywordsChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h2>Threat Level</h2>
+          <div id="threatLevelPill" class="status-pill medium-bg">MEDIUM</div>
+        </div>
+
+        <div class="chart-card">
+          <h2>Decision Distribution</h2>
+          <canvas id="decisionChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h2>Daily Attack Trend</h2>
+          <canvas id="trendChart"></canvas>
+        </div>
+      </section>
     </section>
 
-    <section class="charts-grid">
-      <div class="chart-card">
-        <h2>Top Attack Keywords</h2>
-        <canvas id="keywordsChart"></canvas>
-      </div>
+    <section id="rag-soc" class="tab-content">
+      <h2>📚 RAG Security SOC Dashboard</h2>
 
-      <div class="chart-card">
-        <h2>Threat Level</h2>
-        <div id="threatLevelPill" class="status-pill medium-bg">MEDIUM</div>
-      </div>
+      <section class="charts-grid">
+        <div class="chart-card">
+          <h2>RAG Security</h2>
+          <p>Trust scoring, context poisoning detection, and secure prompt generation are active.</p>
+          <div class="status-pill safe-bg">ACTIVE</div>
+        </div>
 
-      <div class="chart-card">
-        <h2>Decision Distribution</h2>
-        <canvas id="decisionChart"></canvas>
-      </div>
+        <div class="chart-card">
+          <h2>Trust-Aware Gateway</h2>
+          <p>Suspicious and malicious documents are filtered before RAG prompt construction.</p>
+          <div class="status-pill safe-bg">ENFORCING</div>
+        </div>
 
-      <div class="chart-card">
-        <h2>Daily Attack Trend</h2>
-        <canvas id="trendChart"></canvas>
-      </div>
+        <div class="chart-card">
+          <h2>Context Poisoning</h2>
+          <p>Poisoned context is detected, removed, and validated before prompt generation.</p>
+          <div class="status-pill medium-bg">MONITORING</div>
+        </div>
+      </section>
     </section>
 
-    <section class="charts-grid">
-      <div class="chart-card">
-        <h2>RAG Security</h2>
-        <p>Trust scoring, context poisoning detection, and secure prompt generation are active.</p>
-        <div class="status-pill safe-bg">ACTIVE</div>
-      </div>
+    <section id="agent-soc" class="tab-content">
+      <h2>🤖 Agent Security SOC Dashboard</h2>
 
-      <div class="chart-card">
-        <h2>Trust-Aware Gateway</h2>
-        <p>Suspicious and malicious documents are filtered before RAG prompt construction.</p>
-        <div class="status-pill safe-bg">ENFORCING</div>
-      </div>
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <span>Agent Threat Level</span>
+          <strong id="agentThreatLevel" class="danger">HIGH</strong>
+        </div>
 
-      <div class="chart-card">
-        <h2>Context Poisoning</h2>
-        <p>Poisoned context is detected, removed, and validated before prompt generation.</p>
-        <div class="status-pill medium-bg">MONITORING</div>
-      </div>
+        <div class="metric-card">
+          <span>Agent Threat Score</span>
+          <strong id="agentThreatScore">93</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Pending Approvals</span>
+          <strong id="pendingApprovals" class="warning">1</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Approved Requests</span>
+          <strong id="approvedRequests">1</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Rejected Requests</span>
+          <strong id="rejectedRequests" class="danger">1</strong>
+        </div>
+      </section>
+
+      <section class="charts-grid">
+        <div class="chart-card">
+          <h2>Agent Firewall</h2>
+          <p>Detects prompt injection and agent abuse.</p>
+          <div class="status-pill safe-bg">ACTIVE</div>
+        </div>
+
+        <div class="chart-card">
+          <h2>Human Approval Workflow</h2>
+          <p>REVIEW decisions are routed to approval queue.</p>
+          <div class="status-pill medium-bg">ACTIVE</div>
+        </div>
+
+        <div class="chart-card">
+          <h2>Action Validator</h2>
+          <p>Blocks unsafe actions before tool execution.</p>
+          <div class="status-pill safe-bg">ENFORCING</div>
+        </div>
+      </section>
+    </section>
+
+    <section id="redteam" class="tab-content">
+      <h2>🎯 AI Security Red Team Dashboard</h2>
+
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <span>Total Tests</span>
+          <strong>10</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Blocked</span>
+          <strong class="warning">5</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Bypass</span>
+          <strong class="danger">5</strong>
+        </div>
+
+        <div class="metric-card">
+          <span>Leaks</span>
+          <strong>0</strong>
+        </div>
+      </section>
+
+      <section class="chart-card">
+        <h2>Weak Categories</h2>
+        <p class="danger">instruction_bypass → 100% failure</p>
+        <p class="danger">data_extraction → 100% failure</p>
+      </section>
     </section>
   </main>
 

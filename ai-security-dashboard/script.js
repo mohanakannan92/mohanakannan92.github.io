@@ -148,4 +148,17 @@ function renderCharts(data) {
   });
 }
 
+function showTab(tabId, clickedButton) {
+  document.querySelectorAll(".tab-content").forEach(section => {
+    section.classList.remove("active");
+  });
+
+  document.querySelectorAll(".tab-btn").forEach(button => {
+    button.classList.remove("active");
+  });
+
+  document.getElementById(tabId).classList.add("active");
+  clickedButton.classList.add("active");
+}
+
 loadDashboardData();
