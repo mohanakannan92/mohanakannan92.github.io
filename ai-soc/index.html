@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Security Operations Center</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-links">
+        <a href="../index.html">← Back to Home</a>
+        <a href="../ai-security-dashboard/index.html">Legacy Dashboard</a>
+        <a href="../ai-prompt-detector/index.html">Prompt Detector</a>
+    </div>
+
+    <header>
+        <h1>🛡️ AI Security Operations Center</h1>
+        <p>Unified security visibility across Agent, RAG, MCP, and Multi-Agent systems</p>
+    </header>
+
+    <section id="executive-kpi-bar" class="executive-kpi-bar">
+    <div class="kpi-card">
+        <span class="kpi-label">Overall Threat</span>
+        <strong id="kpi-threat-level">Loading...</strong>
+        <small>Unified platform risk</small>
+    </div>
+
+    <div class="kpi-card">
+        <span class="kpi-label">Threat Score</span>
+        <strong id="kpi-threat-score">Loading...</strong>
+        <small>Across all modules</small>
+    </div>
+
+    <div class="kpi-card">
+        <span class="kpi-label">Defense Success</span>
+        <strong id="kpi-defense-rate">Loading...</strong>
+        <small>Blocked + reviewed</small>
+    </div>
+
+    <div class="kpi-card">
+        <span class="kpi-label">Riskiest Module</span>
+        <strong id="kpi-riskiest-module">Loading...</strong>
+        <small>Highest threat score</small>
+    </div>
+</section>
+
+<section id="module-health-center">
+</section>
+
+<section id="threat-distribution-chart">
+</section>
+
+    <nav class="tabs">
+        <button class="tab active" data-tab="executive">Executive Overview</button>
+        <button class="tab" data-tab="agent">Agent Security</button>
+        <button class="tab" data-tab="rag">RAG Security</button>
+        <button class="tab" data-tab="mcp">MCP Security</button>
+        <button class="tab" data-tab="multi-agent">Multi-Agent Security</button>
+    </nav>
+
+    <main>
+        <section id="executive" class="tab-content active"></section>
+        <section id="agent" class="tab-content"></section>
+        <section id="rag" class="tab-content"></section>
+        <section id="mcp" class="tab-content"></section>
+        <section id="multi-agent" class="tab-content"></section>
+    </main>
+
+</div>
+
+<footer>
+    <p>
+        Built by <strong>Mohanakannan M</strong> · AI Security Engineering Portfolio
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

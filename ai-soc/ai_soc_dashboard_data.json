@@ -1,0 +1,377 @@
+{
+    "platform": "AI Security Operations Center",
+    "active_dashboard": "AI SOC Executive Dashboard",
+    "executive_metrics": {
+        "platform": "AI Security Operations Center",
+        "executive_view": "AI SOC Executive Metrics",
+        "modules_active": 4,
+        "healthy_modules": 4,
+        "error_modules": 0,
+        "total_events": 55,
+        "total_blocked": 44,
+        "total_review": 8,
+        "total_allowed": 2,
+        "defense_success_rate": 94.55,
+        "attack_success_rate": 3.64,
+        "overall_threat_score": 44,
+        "overall_threat_level": "MEDIUM",
+        "riskiest_module": "agent_security",
+        "module_threat_scores": {
+            "agent_security": 93,
+            "rag_security": 0,
+            "mcp_security": 70,
+            "multi_agent_security": 15
+        },
+        "module_event_counts": {
+            "agent_security": {
+                "total": 37,
+                "blocked": 33,
+                "review": 3,
+                "allowed": 0
+            },
+            "rag_security": {
+                "total": 3,
+                "blocked": 1,
+                "review": 1,
+                "allowed": 1
+            },
+            "mcp_security": {
+                "total": 5,
+                "blocked": 3,
+                "review": 1,
+                "allowed": 1
+            },
+            "multi_agent_security": {
+                "total": 10,
+                "blocked": 7,
+                "review": 3,
+                "allowed": 0
+            }
+        }
+    },
+    "modules": {
+        "agent_security": {
+            "platform": "Agent Security Operations Center",
+            "dashboard_tabs": [
+                {
+                    "name": "AI SOC Dashboard",
+                    "status": "AVAILABLE",
+                    "purpose": "General AI security overview."
+                },
+                {
+                    "name": "RAG SOC Dashboard",
+                    "status": "AVAILABLE",
+                    "purpose": "RAG security, trust scoring, and context monitoring."
+                },
+                {
+                    "name": "Agent SOC Dashboard",
+                    "status": "ACTIVE",
+                    "purpose": "Agent security, tools, approvals, and actions."
+                },
+                {
+                    "name": "Red Team Dashboard",
+                    "status": "AVAILABLE",
+                    "purpose": "Attack simulation, red team results, and weakness tracking."
+                }
+            ],
+            "active_dashboard": "Agent SOC Dashboard",
+            "threat_level": "HIGH",
+            "threat_score": 93,
+            "threat_reason": "Threat score calculated from blocked and review requests.",
+            "summary": {
+                "total_requests": 37,
+                "allowed_requests": 0,
+                "review_requests": 3,
+                "blocked_requests": 33
+            },
+            "decision_distribution": {
+                "REVIEW": 3,
+                "BLOCK": 33
+            },
+            "top_blocking_components": {
+                "Action Validator": 33
+            },
+            "top_agents": {
+                "calendar_agent": 3,
+                "email_agent": 33
+            },
+            "top_tools": {
+                "read_calendar": 3,
+                "draft_email": 33
+            },
+            "approval_metrics": {
+                "total_approval_requests": 3,
+                "pending_approvals": 1,
+                "approved_requests": 1,
+                "rejected_requests": 1,
+                "approval_risk_distribution": {
+                    "LOW": 0,
+                    "MEDIUM": 3,
+                    "HIGH": 0
+                }
+            },
+            "monitoring_panels": [
+                {
+                    "name": "Agent Firewall",
+                    "status": "ACTIVE",
+                    "purpose": "Detect prompt injection and agent abuse."
+                },
+                {
+                    "name": "Memory Firewall",
+                    "status": "ACTIVE",
+                    "purpose": "Detect memory poisoning and policy override."
+                },
+                {
+                    "name": "Permission Engine",
+                    "status": "ACTIVE",
+                    "purpose": "Enforce least privilege for tool access."
+                },
+                {
+                    "name": "Action Validator",
+                    "status": "ACTIVE",
+                    "purpose": "Validate high-risk tool actions."
+                },
+                {
+                    "name": "Tool Output Sanitizer",
+                    "status": "ACTIVE",
+                    "purpose": "Remove unsafe tool output before agent use."
+                },
+                {
+                    "name": "Human Approval Workflow",
+                    "status": "ACTIVE",
+                    "purpose": "Manage REVIEW decisions through approval queue."
+                }
+            ]
+        },
+        "rag_security": {
+            "platform": "RAG Security Operations Center",
+            "active_dashboard": "RAG SOC Dashboard",
+            "metrics": {
+                "total_requests": 3,
+                "blocked_requests": 1,
+                "review_requests": 1,
+                "total_documents": 10,
+                "trusted_documents": 4,
+                "suspicious_documents": 10,
+                "malicious_documents": 1,
+                "blocked_documents": 1,
+                "allowed_documents": 4,
+                "validation_pass": 3,
+                "validation_fail": 0,
+                "gateway_allow": 1,
+                "gateway_allow_with_blocked_context": 1,
+                "gateway_allow_with_review_context": 0,
+                "gateway_block": 0
+            }
+        },
+        "mcp_security": {
+            "platform": "MCP Security Operations Center",
+            "dashboard_tabs": [
+                "AI SOC Dashboard",
+                "RAG SOC Dashboard",
+                "Agent SOC Dashboard",
+                "MCP SOC Dashboard",
+                "Red Team Dashboard"
+            ],
+            "active_dashboard": "MCP SOC Dashboard",
+            "threat_level": "HIGH",
+            "threat_score": 70,
+            "threat_reason": "Threat score calculated from blocked and review requests.",
+            "summary": {
+                "total_requests": 5,
+                "allowed_requests": 1,
+                "review_requests": 1,
+                "blocked_requests": 3
+            },
+            "decision_distribution": {
+                "ALLOW": 1,
+                "BLOCK": 3,
+                "REVIEW": 1
+            },
+            "top_blocking_components": {
+                "tool_permission": 1,
+                "tool_poisoning": 1,
+                "prompt_poisoning": 1
+            },
+            "top_agents": {
+                "calendar_agent": 3,
+                "rag_agent": 2
+            },
+            "top_tools": {
+                "read_calendar": 2,
+                "send_email": 1,
+                "retrieve_documents": 2
+            },
+            "tool_permission_distribution": {
+                "ALLOW": 4,
+                "BLOCK": 1
+            },
+            "tool_poisoning_distribution": {
+                "ALLOW": 3,
+                "BLOCK": 1
+            },
+            "resource_poisoning_distribution": {
+                "ALLOW": 3,
+                "REVIEW": 1
+            },
+            "prompt_poisoning_distribution": {
+                "ALLOW": 3,
+                "BLOCK": 1
+            },
+            "monitoring_panels": [
+                {
+                    "name": "MCP Tool Registry",
+                    "status": "ACTIVE",
+                    "purpose": "Enforce least privilege for MCP tools."
+                },
+                {
+                    "name": "MCP Tool Poisoning Detector",
+                    "status": "ACTIVE",
+                    "purpose": "Detect poisoned MCP tool outputs."
+                },
+                {
+                    "name": "MCP Resource Poisoning Detector",
+                    "status": "ACTIVE",
+                    "purpose": "Detect poisoned MCP resources."
+                },
+                {
+                    "name": "MCP Prompt Poisoning Detector",
+                    "status": "ACTIVE",
+                    "purpose": "Detect poisoned MCP prompt templates."
+                },
+                {
+                    "name": "Unified MCP Security Gateway",
+                    "status": "ACTIVE",
+                    "purpose": "Centralized MCP security enforcement."
+                }
+            ]
+        },
+        "multi_agent_security": {
+            "platform": "Multi-Agent Security Operations Center",
+            "dashboard_tabs": [
+                "AI SOC Dashboard",
+                "RAG SOC Dashboard",
+                "Agent SOC Dashboard",
+                "MCP SOC Dashboard",
+                "Multi-Agent SOC Dashboard",
+                "Red Team Dashboard"
+            ],
+            "active_dashboard": "Multi-Agent SOC Dashboard",
+            "threat_level": "LOW",
+            "threat_score": 15,
+            "threat_reason": "Threat score calculated from attack success and review rate.",
+            "summary": {},
+            "decision_distribution": {},
+            "top_blocking_components": {
+                "agent_trust": 1,
+                "delegation": 4,
+                "cross_agent_prompt": 2
+            },
+            "top_source_agents": {},
+            "top_target_agents": {},
+            "top_delegated_actions": {},
+            "red_team_panel": {
+                "total_attacks": 10,
+                "blocked": 7,
+                "review": 3,
+                "allowed": 0,
+                "defense_success_rate": 100.0,
+                "attack_success_rate": 0.0,
+                "top_blocking_components": {
+                    "agent_trust": 1,
+                    "delegation": 4,
+                    "cross_agent_prompt": 2
+                },
+                "attack_category_results": {
+                    "agent_impersonation": {
+                        "total": 1,
+                        "blocked": 1,
+                        "review": 0,
+                        "allowed": 0
+                    },
+                    "delegation_abuse": {
+                        "total": 1,
+                        "blocked": 1,
+                        "review": 0,
+                        "allowed": 0
+                    },
+                    "cross_agent_prompt_injection": {
+                        "total": 1,
+                        "blocked": 1,
+                        "review": 0,
+                        "allowed": 0
+                    },
+                    "memory_poisoning": {
+                        "total": 1,
+                        "blocked": 1,
+                        "review": 0,
+                        "allowed": 0
+                    },
+                    "privilege_escalation": {
+                        "total": 1,
+                        "blocked": 1,
+                        "review": 0,
+                        "allowed": 0
+                    },
+                    "trust_abuse": {
+                        "total": 1,
+                        "blocked": 1,
+                        "review": 0,
+                        "allowed": 0
+                    },
+                    "deep_cross_agent_prompt_injection": {
+                        "total": 1,
+                        "blocked": 0,
+                        "review": 1,
+                        "allowed": 0
+                    },
+                    "deep_memory_poisoning": {
+                        "total": 1,
+                        "blocked": 0,
+                        "review": 1,
+                        "allowed": 0
+                    },
+                    "deep_authority_injection": {
+                        "total": 1,
+                        "blocked": 1,
+                        "review": 0,
+                        "allowed": 0
+                    },
+                    "high_risk_allowed_action": {
+                        "total": 1,
+                        "blocked": 0,
+                        "review": 1,
+                        "allowed": 0
+                    }
+                }
+            },
+            "monitoring_panels": [
+                {
+                    "name": "Agent Trust Validator",
+                    "status": "ACTIVE",
+                    "purpose": "Detect unknown agents and unauthorized trust relationships."
+                },
+                {
+                    "name": "Delegation Validator",
+                    "status": "ACTIVE",
+                    "purpose": "Control what actions one agent can delegate to another."
+                },
+                {
+                    "name": "Cross-Agent Prompt Scanner",
+                    "status": "ACTIVE",
+                    "purpose": "Detect prompt injection between agents."
+                },
+                {
+                    "name": "Shared Memory Firewall",
+                    "status": "ACTIVE",
+                    "purpose": "Detect memory poisoning and trust manipulation."
+                },
+                {
+                    "name": "Multi-Agent Gateway",
+                    "status": "ACTIVE",
+                    "purpose": "Centralized enforcement for agent-to-agent interactions."
+                }
+            ]
+        }
+    }
+}
